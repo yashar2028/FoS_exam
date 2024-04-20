@@ -5,25 +5,12 @@
     <title>Book</title>
 </head>
 <body>
-
-<table>
-    <thead>
-        <tr>
-            <th>id</th>
-            <th>title</th>
-            <th>author</th>
-        </tr>
-    </thead>
-    <tbody>
-         {% for items in Book %}
-         <tr>
-             <td>{{ Book.id }}</td>
-             <td>{{ Book.title }}</td>
-             <td>{{ Book.author }}</td>
-         </tr>
-         {% endfor %}
-    </tbody>
-</table>
-
+<h1>Books List</h1>
+    <ul>
+        {% for book in Book %}
+            <li>{{ book.title }} , {{ book.author }}</li>
+        {% endfor %}
+    </ul>
+<a href="/add_book">Submit</a>
 </body>
 </html>
